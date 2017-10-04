@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-sm-3">
+  </div>
+  <div class="col-sm-9">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+      <div class="row">
+        <div class="col-xs-7 form-group">
+          <input
+            type="text"
+            id="name"
+            class="form-control"
+            name="name"
+            ngModel
+            required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-5">
+          <button
+           class="btn btn-warning"
+           type="submit"
+           [disabled]="!f.valid">Shorten</button>
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="col-xs-7">
+          <input class="form-control" type="text" readonly name="shortUrl" ngModel/>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
